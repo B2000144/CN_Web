@@ -46,38 +46,6 @@
  <body>
      <header>
          <div class="header_top_menu">
-             <div class="header_top_menu_all">
-                 <div class="header_top">
-                     <div class="bg_in row d-flex align-items-center">
-                         <div class="logo col-md-4">
-                             <a href="<?php echo BASE_URL ?>"><img src="<?php echo BASE_URL ?>/public/images/logo.png" width="350px" height="100px" alt="logohere.jpeg" /></a>
-                         </div>
-                         <nav class="menu_top col-md-4">
-                             <form autocomplete="off" class="search_form" method="get" action="">
-                                 <input class="searchTerm" name="search" placeholder="Nhập từ cần tìm..." />
-                                 <button class="searchButton" type="submit">
-                                     <i class="fa fa-search" aria-hidden="true"></i>
-                                 </button>
-                             </form>
-                         </nav>
-                         <div class="cart_wrapper col-md-4 d-flex justify-content-end">
-                             <div class="row">
-                                 <div class="col-md-6 text-center fs-4 ">
-
-                                 </div>
-                                 <div class="d-block col-md-6 text-center fs-4 ">
-                                     <a href='<?php echo BASE_URL ?>/giohang'>
-                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
-                                         <span class="text-login">Giỏ hàng</span>
-                                     </a>
-                                 </div>
-                             </div>
-                             <div class="clear"></div>
-                         </div>
-                         <div class="clear"></div>
-                     </div>
-                 </div>
-             </div>
              <div class="btn_menu_search">
                  <div class="bg_in">
                      <div class="table_row_search">
@@ -108,6 +76,7 @@
 
                                          </ul>
                                      </li>
+                                     <li><a href='<?php echo BASE_URL ?>/giohang'>Giỏ hàng</a></li>
                                  </ul>
                              </div>
                          </div>
