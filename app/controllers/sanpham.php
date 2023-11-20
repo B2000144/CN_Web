@@ -15,7 +15,6 @@ class sanpham extends DController
 		$table_product = 'tbl_product';
 		$categorymodel = $this->load->model('categorymodel');
 		$data['category'] = $categorymodel->category_home($table);
-
 		$data['list_product'] = $categorymodel->list_product_home($table_product);
 
 		$this->load->view('header', $data);
@@ -71,7 +70,6 @@ class sanpham extends DController
 		$data['related'] = $categorymodel->related_product_home($table, $table_product, $cond_related);
 
 		$this->load->view('header', $data);
-		// $this->load->view('slider');
 		$this->load->view('details_product', $data);
 		$this->load->view('footer');
 	}

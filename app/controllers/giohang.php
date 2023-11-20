@@ -132,17 +132,6 @@ class giohang extends DController
 				}
 			}
 			header('Location:' . BASE_URL . '/giohang');
-			// if(isset($_SESSION["shopping_cart"])){
-			// foreach($_SESSION["shopping_cart"] as $key => $values){
-
-			// 	if($_SESSION["shopping_cart"][$key]['product_id'] == $_POST['delete_cart']){
-			// 		$_SESSION["shopping_cart"][$key];
-			// 	}	
-			// }
-			// header('Location:'.BASE_URL.'/giohang');
-			// }else{
-			// header('Location:'.BASE_URL);
-			// }
 		}
 	}
 }

@@ -16,7 +16,6 @@ class index extends DController
 	}
 	public function homepage()
 	{
-		// $this->load->view('slider');
 		$table = 'tbl_category_product';
 		$table_product = 'tbl_product';
 		$categorymodel = $this->load->model('categorymodel');
@@ -31,8 +30,6 @@ class index extends DController
 
 	public function notfound()
 	{
-
-		// $this->load->view('slider');
 		$table = 'tbl_category_product';
 		$categorymodel = $this->load->model('categorymodel');
 		$data['category'] = $categorymodel->category_home($table);
