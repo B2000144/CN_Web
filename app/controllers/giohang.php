@@ -21,7 +21,6 @@ class giohang extends DController
 		$table = 'tbl_category_product';
 		$categorymodel = $this->load->model('categorymodel');
 		$data['category'] = $categorymodel->category_home($table);
-
 		$this->load->view('header', $data);
 		//$this->load->view('slider');
 		$this->load->view('cart');
