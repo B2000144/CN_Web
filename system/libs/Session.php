@@ -1,41 +1,43 @@
-<?php 
+<?php
 
-class Session{
+class Session
+{
 
-	public static function init(){
+	public static function init()
+	{
 		session_start();
 	}
 
-	public static function set($key,$val){
+	public static function set($key, $val)
+	{
 		$_SESSION[$key] = $val;
 	}
 
-	public static function get($key){
-		if(isset($_SESSION[$key])){
+	public static function get($key)
+	{
+		if (isset($_SESSION[$key])) {
 			return $_SESSION[$key];
-		}else{
+		} else {
 			return false;
 		}
 	}
-	public static function checkSession(){
+	public static function checkSession()
+	{
 		self::init();
-		if(self::get('login') == false){
+		if (self::get('login') == false) {
 			self::destroy();
-			header("Location:".BASE_URL."/login");
-		}else{
-
+			header("Location:" . BASE_URL . "/login");
+		} else {
 		}
 	}
 
-	public static function destroy(){
+	public static function destroy()
+	{
 		session_destroy();
 	}
 
-	public static function unset($key){
+	public static function unset($key)
+	{
 		unset($_SESSION[$key]);
 	}
-
 }
-
-
-?>
