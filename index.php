@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Ecommerce</title>
+    <title>Web mat kinh</title>
 </head>
 
 <body>
@@ -17,7 +17,6 @@
 			include_once 'app/config/config.php';
 
 			$main = new Main();
-
 		?>
     </h1>
 

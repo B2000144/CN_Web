@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Project\\Tri\\' => array($baseDir . '/libs'),
+    'App\\' => array($baseDir . '/libs'),
 );
