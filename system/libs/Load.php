@@ -2,6 +2,9 @@
 
 class Load
 {
+	public $title;
+	public $desc;
+	public $image;
 
 
 	public function __construct()

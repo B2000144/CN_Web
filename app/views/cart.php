@@ -24,13 +24,13 @@
                   </div>
               </div>
               <?php
-                  if(!empty($_GET['msg'])){
-                     $msg = unserialize(urldecode($_GET['msg']));
-                     foreach ($msg as $key => $value){
-                        echo '<span style="color:blue;font-weight:bold">'.$value.'</span>';
-                     }
-                  }
-                  ?>
+                if (!empty($_GET['msg'])) {
+                    $msg = unserialize(urldecode($_GET['msg']));
+                    foreach ($msg as $key => $value) {
+                        echo '<span style="color:blue;font-weight:bold">' . $value . '</span>';
+                    }
+                }
+                ?>
               <div class="content_text">
                   <div class="container_table">
                       <table class="table table-hover table-condensed">
@@ -47,15 +47,15 @@
                           </thead>
                           <tbody>
                               <?php
-                                 if(isset($_SESSION['shopping_cart'])){
-                           ?>
+                                if (isset($_SESSION['shopping_cart'])) {
+                                ?>
                               <form action="<?php echo BASE_URL ?>/giohang/updategiohang" method="POST">
                                   <?php
-                                    $total = 0;
-                                    foreach($_SESSION['shopping_cart'] as $key => $value){
-                                    $subtotal = $value['product_quantity']*$value['product_price'];
-                                    $total+=$subtotal; 
-                                 ?>
+                                        $total = 0;
+                                        foreach ($_SESSION['shopping_cart'] as $key => $value) {
+                                            $subtotal = $value['product_quantity'] * $value['product_price'];
+                                            $total += $subtotal;
+                                        ?>
                                   <tr class="tr">
                                       <td data-th="Hình ảnh">
                                           <div class="col_table_image col_table_hidden-xs"><img
@@ -70,7 +70,7 @@
                                       </td>
 
                                       <td data-th="Giá"><span
-                                              class="color_red font_money"><?php echo number_format($value['product_price'],0,',','.').'đ' ?></span>
+                                              class="color_red font_money"><?php echo number_format($value['product_price'], 0, ',', '.') . 'đ' ?></span>
                                       </td>
 
                                       <td data-th="Số lượng">
@@ -87,7 +87,7 @@
                                       </td>
 
                                       <td data-th="Thành tiền" class="text_center"><span
-                                              class="color_red font_money"><?php echo number_format($subtotal,0,',','.').'đ' ?></span>
+                                              class="color_red font_money"><?php echo number_format($subtotal, 0, ',', '.') . 'đ' ?></span>
                                       </td>
 
                                       <td class="actions aligncenter">
@@ -102,22 +102,22 @@
                                       </td>
 
                                   </tr>
-                                  <?php  
-                              } 
-                              ?>
+                                  <?php
+                                        }
+                                        ?>
                               </form>
                               <tr>
                                   <td colspan="7" class="textright_text">
                                       <div class="sum_price_all">
                                           <span class="text_price">Tổng tiền thành toán</span>:
                                           <span
-                                              class="text_price color_red"><?php echo number_format($total,0,',','.').'đ' ?></span>
+                                              class="text_price color_red"><?php echo number_format($total, 0, ',', '.') . 'đ' ?></span>
                                       </div>
                                   </td>
                               </tr>
-                              <?php 
-                           }else{
-                           ?>
+                              <?php
+                                } else {
+                                ?>
                               <tr>
                                   <td colspan="7">
                                       <div class="sum_price_all">
@@ -126,8 +126,8 @@
                                   </td>
                               </tr>
                               <?php
-                           } 
-                           ?>
+                                }
+                                ?>
                           </tbody>
                           <tfoot>
                               <tr class="tr_last">
